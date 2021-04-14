@@ -87,7 +87,7 @@ The following data units are currently supported.
 
 Bit (b). Data unit representing a binary digit
 
-Defined in: [index.ts:10](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L10)
+Defined in: [index.ts:10](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L10)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 Byte (B). Data unit representing 8 bits
 
-Defined in: [index.ts:25](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L25)
+Defined in: [index.ts:25](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L25)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 Gibibyte (GiB). Binary data unit representing 1,024<sup>3</sup> bytes
 
-Defined in: [index.ts:115](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L115)
+Defined in: [index.ts:115](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L115)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 Gigabyte (GB). Decimal data unit representing 1,000<sup>3</sup> bytes
 
-Defined in: [index.ts:100](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L100)
+Defined in: [index.ts:100](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L100)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 Kibibyte (KiB). Binary data unit representing 1,024 bytes
 
-Defined in: [index.ts:55](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L55)
+Defined in: [index.ts:55](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L55)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 Kilobyte (kB). Decimal data unit representing 1,000 bytes
 
-Defined in: [index.ts:40](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L40)
+Defined in: [index.ts:40](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L40)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 Mebibyte (MiB). Binary data unit representing 1,024<sup>2</sup> bytes
 
-Defined in: [index.ts:85](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L85)
+Defined in: [index.ts:85](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L85)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 Megabyte (MB). Decimal data unit representing 1,000<sup>2</sup> bytes
 
-Defined in: [index.ts:70](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L70)
+Defined in: [index.ts:70](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L70)
 
 ## Methods
 
@@ -188,7 +188,7 @@ Name | Type | Description |
 
 converted value in this unit
 
-Defined in: [index.ts:259](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L259)
+Defined in: [index.ts:259](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L259)
 
 ___
 
@@ -208,7 +208,7 @@ Name | Type | Description |
 
 converted bit value
 
-Defined in: [index.ts:178](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L178)
+Defined in: [index.ts:178](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L178)
 
 ___
 
@@ -228,7 +228,7 @@ Name | Type | Description |
 
 converted byte value
 
-Defined in: [index.ts:188](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L188)
+Defined in: [index.ts:188](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L188)
 
 ___
 
@@ -248,7 +248,7 @@ Name | Type | Description |
 
 converted gibibyte value
 
-Defined in: [index.ts:248](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L248)
+Defined in: [index.ts:248](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L248)
 
 ___
 
@@ -268,7 +268,7 @@ Name | Type | Description |
 
 converted gigabyte value
 
-Defined in: [index.ts:238](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L238)
+Defined in: [index.ts:238](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L238)
 
 ___
 
@@ -288,7 +288,7 @@ Name | Type | Description |
 
 converted kibibyte value
 
-Defined in: [index.ts:208](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L208)
+Defined in: [index.ts:208](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L208)
 
 ___
 
@@ -308,7 +308,7 @@ Name | Type | Description |
 
 converted kilobyte value
 
-Defined in: [index.ts:198](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L198)
+Defined in: [index.ts:198](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L198)
 
 ___
 
@@ -328,7 +328,7 @@ Name | Type | Description |
 
 converted mebibyte value
 
-Defined in: [index.ts:228](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L228)
+Defined in: [index.ts:228](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L228)
 
 ___
 
@@ -348,4 +348,4 @@ Name | Type | Description |
 
 converted megabyte value
 
-Defined in: [index.ts:218](https://github.com/zduclos/digital-unit-converter/blob/develop/src/index.ts#L218)
+Defined in: [index.ts:218](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L218)
