@@ -38,8 +38,9 @@
     "tebibyte"
   ],
   "type": "commonjs",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm.index.js",
+  "types": "./lib/cjs/index.d.ts",
   "files": [
     "lib/**/*",
     "README.md",
@@ -47,14 +48,22 @@
   ],
   "exports": {
     ".": {
-      "types": "./lib/index.d.ts",
-      "import": "./lib/index.js",
-      "require": "./lib/index.js",
-      "default": "./lib/index.js"
+      "import": {
+        "types": "./lib/esm/index.d.ts",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "types": "./lib/cjs/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      },
+      "default": "./lib/cjs/index.js"
     }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:esm-package",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:esm-package": "echo '{\"type\":\"module\"}' > lib/esm/package.json",
     "watch": "tsc -p tsconfig.json --watch",
     "clean": "rm -rf lib coverage",
     "test": "jest",

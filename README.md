@@ -23,12 +23,12 @@ $ yarn add digital-unit-converter
 
 ## Import module
 
-CommonJS
+CommonJS / JavaScript
 ```js
 const { DataUnit } = require('digital-unit-converter');
 ```
 
-ES6
+ES Modules / TypeScript
 ```ts
 import { DataUnit } from 'digital-unit-converter';
 ```
@@ -111,7 +111,7 @@ ___
 
 Gibibyte (GiB). Binary data unit representing 1,024<sup>3</sup> bytes
 
-Defined in: [index.ts:41](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L41)
+Defined in: [index.ts:43](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L43)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 Gigabyte (GB). Decimal data unit representing 1,000<sup>3</sup> bytes
 
-Defined in: [index.ts:46](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L46)
+Defined in: [index.ts:38](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L38)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 Kibibyte (KiB). Binary data unit representing 1,024 bytes
 
-Defined in: [index.ts:22](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L22)
+Defined in: [index.ts:23](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L23)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 Mebibyte (MiB). Binary data unit representing 1,024<sup>2</sup> bytes
 
-Defined in: [index.ts:32](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L32)
+Defined in: [index.ts:33](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L33)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 Megabyte (MB). Decimal data unit representing 1,000<sup>2</sup> bytes
 
-Defined in: [index.ts:27](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L27)
+Defined in: [index.ts:28](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L28)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 Tebibyte (TiB). Binary data unit representing 1,024<sup>4</sup> bytes
 
-Defined in: [index.ts:50](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L50)
+Defined in: [index.ts:48](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L48)
 
 ___
 
@@ -214,7 +214,7 @@ Name | Type | Description |
 
 converted value in this unit
 
-Defined in: [index.ts:63](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L63)
+Defined in: [index.ts:67](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L67)
 
 ___
 
@@ -234,7 +234,7 @@ Name | Type | Description |
 
 converted bit value
 
-Defined in: [index.ts:72](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L72)
+Defined in: [index.ts:77](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L77)
 
 ___
 
@@ -254,7 +254,7 @@ Name | Type | Description |
 
 converted byte value
 
-Defined in: [index.ts:81](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L81)
+Defined in: [index.ts:87](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L87)
 
 ___
 
@@ -274,7 +274,7 @@ Name | Type | Description |
 
 converted gibibyte value
 
-Defined in: [index.ts:135](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L135)
+Defined in: [index.ts:147](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L147)
 
 ___
 
@@ -294,7 +294,7 @@ Name | Type | Description |
 
 converted gigabyte value
 
-Defined in: [index.ts:126](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L126)
+Defined in: [index.ts:137](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L137)
 
 ___
 
@@ -314,7 +314,7 @@ Name | Type | Description |
 
 converted kibibyte value
 
-Defined in: [index.ts:99](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L99)
+Defined in: [index.ts:107](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L107)
 
 ___
 
@@ -334,7 +334,7 @@ Name | Type | Description |
 
 converted kilobyte value
 
-Defined in: [index.ts:90](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L90)
+Defined in: [index.ts:97](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L97)
 
 ___
 
@@ -354,7 +354,7 @@ Name | Type | Description |
 
 converted mebibyte value
 
-Defined in: [index.ts:117](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L117)
+Defined in: [index.ts:127](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L127)
 
 ___
 
@@ -374,7 +374,7 @@ Name | Type | Description |
 
 converted megabyte value
 
-Defined in: [index.ts:108](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L108)
+Defined in: [index.ts:117](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L117)
 
 ### toTebibytes
 
@@ -392,7 +392,7 @@ Name | Type | Description |
 
 converted tebibyte value
 
-Defined in: [index.ts:153](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L153)
+Defined in: [index.ts:167](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L167)
 
 ___
 
@@ -412,7 +412,7 @@ Name | Type | Description                   |
 
 converted terabyte value
 
-Defined in: [index.ts:144](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L144)
+Defined in: [index.ts:157](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L157)
 
 ___
 
