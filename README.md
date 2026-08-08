@@ -13,7 +13,7 @@
 
 Using npm
 ```console
-$ npm install digital-unit-converter --save
+$ npm install digital-unit-converter
 ```
 
 Using yarn
@@ -23,12 +23,12 @@ $ yarn add digital-unit-converter
 
 ## Import module
 
-CommonJS / JavaScript
+The package provides native CommonJS and ES Module builds
+
 ```js
 const { DataUnit } = require('digital-unit-converter');
 ```
 
-ES Modules / TypeScript
 ```ts
 import { DataUnit } from 'digital-unit-converter';
 ```
@@ -417,7 +417,7 @@ Defined in: [index.ts:157](https://github.com/zduclos/digital-unit-converter/blo
 ___
 
 ## Development
-Node.js 22 is supported.
+Node.js 22 or newer is supported.
 
 ```shell
 npm install

@@ -36,6 +36,10 @@ test('Convert tebibytes (TiB) to tebibytes (TiB)', () => {
     expect(DataUnit.TEBIBYTE.toTebibytes(1)).toBe(1);
 });
 
+test('Convert tebibytes (TiB) to terabytes (TB)', () => {
+    expect(DataUnit.TEBIBYTE.toTerabytes(1)).toBe(1.099511627776);
+});
+
 test('Convert bits (b) to tebibytes (TiB)', () => {
     expect(DataUnit.TEBIBYTE.convert(1, DataUnit.BIT)).toBe(1.1368683772161603e-13);
 });
@@ -70,4 +74,8 @@ test('Convert gibibytes (GiB) to tebibytes (TiB)', () => {
 
 test('Convert tebibytes (TiB) to tebibytes (TiB)', () => {
     expect(DataUnit.TEBIBYTE.convert(1, DataUnit.TEBIBYTE)).toBe(1);
+});
+
+test('Convert terabytes (TB) to tebibytes (TiB)', () => {
+    expect(DataUnit.TEBIBYTE.convert(1, DataUnit.TERABYTE)).toBe(0.9094947017729282);
 });

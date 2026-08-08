@@ -39,10 +39,11 @@
   ],
   "type": "commonjs",
   "main": "./lib/cjs/index.js",
-  "module": "./lib/esm.index.js",
+  "module": "./lib/esm/index.js",
   "types": "./lib/cjs/index.d.ts",
   "files": [
     "lib/**/*",
+    "src/**/*.ts",
     "README.md",
     "LICENSE"
   ],
@@ -60,6 +61,7 @@
     }
   },
   "scripts": {
+    "prebuild": "npm run clean",
     "build": "npm run build:cjs && npm run build:esm && npm run build:esm-package",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
