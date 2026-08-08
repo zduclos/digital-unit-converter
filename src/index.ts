@@ -48,7 +48,7 @@ export class DataUnit {
     public static readonly TERABYTE = new DataUnit(1_000 ** 4);
 
     /**
-     * Tibibyte (TiB). Binary data unit representing (1,024)^4 bytes
+     * Tebibyte (TiB). Binary data unit representing (1,024)^4 bytes
      */
     public static readonly TEBIBYTE = new DataUnit(1_024 ** 4);
 
