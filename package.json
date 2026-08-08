@@ -43,7 +43,7 @@
   "types": "./lib/cjs/index.d.ts",
   "files": [
     "lib/**/*",
-    "src/**/*.ts",
+    "src/index.ts",
     "README.md",
     "LICENSE"
   ],
@@ -69,10 +69,12 @@
     "watch": "tsc -p tsconfig.json --watch",
     "clean": "rm -rf lib coverage",
     "test": "jest",
+    "test:cjs": "node -e \"const assert = require('node:assert/strict'); const { DataUnit } = require('./lib/cjs/index.js'); assert.equal(DataUnit.MEGABYTE.toBytes(1), 1000000)\"",
+    "test:esm": "node --input-type=module -e \"import assert from 'node:assert/strict'; import { DataUnit } from './lib/esm/index.js'; assert.equal(DataUnit.MEGABYTE.toBytes(1), 1000000)\"",
     "lint": "eslint 'src/**/*.ts' --quiet",
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",
-    "check": "npm run lint && npm run format:check && npm run build && npm test",
+    "check": "npm run lint && npm run format:check && npm run build && npm test && npm run test:cjs && npm run test:esm",
     "prepack": "npm run build"
   },
   "engines": {
