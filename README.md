@@ -23,11 +23,15 @@ $ yarn add digital-unit-converter
 
 ## Import module
 
-The package provides native CommonJS and ES Module builds
+The package provides native CommonJS and ES Module builds with TypeScript declarations.
+
+### CommonJS
 
 ```js
 const { DataUnit } = require('digital-unit-converter');
 ```
+
+### ES Modules
 
 ```ts
 import { DataUnit } from 'digital-unit-converter';
@@ -342,7 +346,7 @@ ___
 
 ▸ **toMebibytes**(`val`: *number*): *number*
 
-Convert a value in this unit mebibytes (MiB)
+Convert a value in this unit to mebibytes (MiB)
 
 #### Parameters:
 

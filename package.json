@@ -1,6 +1,6 @@
 {
   "name": "digital-unit-converter",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Utility to simplify conversion of digital units of measurement",
   "author": "Zach Duclos",
   "license": "MIT",
@@ -66,7 +66,6 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:esm-package": "echo '{\"type\":\"module\"}' > lib/esm/package.json",
-    "watch": "tsc -p tsconfig.json --watch",
     "clean": "rm -rf lib coverage",
     "test": "jest",
     "test:cjs": "node -e \"const assert = require('node:assert/strict'); const { DataUnit } = require('./lib/cjs/index.js'); assert.equal(DataUnit.MEGABYTE.toBytes(1), 1000000)\"",
