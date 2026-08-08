@@ -21,12 +21,12 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cache: npm
       - name: Install dependencies
-        uses: npm ci
+        run: npm ci
       - name: Verify package
         run: npm run check
       - name: Verify package contents
         run: npm pack --dry-run
       - name: Publish NPM
-        run: rpm publish --access public --provenance
+        run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
