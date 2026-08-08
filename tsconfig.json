@@ -1,22 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "declaration": true,
     "strict": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "noImplicitAny": true,
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "preserveConstEnums": true,
     "rootDir": "src",
-    "outDir": "lib",
-    "lib": [
-      "ES2020"
-    ]
+    "outDir": "lib"
   },
   "include": [
     "src/**/*"

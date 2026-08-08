@@ -1,5 +1,8 @@
 name: Node.js Package
 
+permissions:
+  contents: read
+
 on:
   release:
     types: [created]
@@ -8,24 +11,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14.x'
+          node-version: '20.x'
       - run: yarn install --frozen-lockfile
       - run: yarn lint
       - run: yarn test
       - run: yarn build
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-package
+          path: lib
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14.x'
+          node-version: '20.x'
           registry-url: https://registry.npmjs.org/
-      - run: yarn publish
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: npm-package
+          path: lib
+      - name: Verify package contents
+        run: npm pack --dry-run 
+      - name: Publish package
+        run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} 

@@ -13,7 +13,7 @@ test('Convert gibibytes (GiB) to kilobytes (kB)', () => {
 });
 
 test('Convert gibibytes (GiB) to kibibytes (KiB)', () => {
-    expect(DataUnit.GIBIBYTE.toKibibytes(1)).toBe(1_048_576.534774);
+    expect(DataUnit.GIBIBYTE.toKibibytes(1)).toBe(1048576);
 });
 
 test('Convert gibibytes (GiB) to megabytes (MB)', () => {
@@ -30,6 +30,14 @@ test('Convert gibibytes (GiB) to gigabytes (GB)', () => {
 
 test('Convert gibibytes (GiB) to gibibytes (GiB)', () => {
     expect(DataUnit.GIBIBYTE.toGibibytes(1)).toBe(1);
+});
+
+test('Convert gibibytes (GiB) to terabytes (TB)', () => {
+    expect(DataUnit.GIBIBYTE.toTerabytes(1)).toBe(0.001073741824);
+});
+
+test('Convert gibibytes (GiB) to tebibytes (TiB)', () => {
+    expect(DataUnit.GIBIBYTE.toTebibytes(1)).toBe(0.0009765625);
 });
 
 test('Convert bits (b) to gibibytes (GiB)', () => {
@@ -49,7 +57,7 @@ test('Convert kibibytes (KiB) to gibibytes (GiB)', () => {
 });
 
 test('Convert megabytes (MB) to gibibytes (GiB)', () => {
-    expect(DataUnit.GIBIBYTE.convert(1, DataUnit.MEGABYTE)).toBe(0.000931323);
+    expect(DataUnit.GIBIBYTE.convert(1, DataUnit.MEGABYTE)).toBe(0.0009313225746154785);
 });
 
 test('Convert mebibytes (MiB) to gibibytes (GiB)', () => {
@@ -57,9 +65,17 @@ test('Convert mebibytes (MiB) to gibibytes (GiB)', () => {
 });
 
 test('Convert gigabytes (GB) to gibibytes (GiB)', () => {
-    expect(DataUnit.GIBIBYTE.convert(1, DataUnit.GIGABYTE)).toBe(0.9313225746154784);
+    expect(DataUnit.GIBIBYTE.convert(1, DataUnit.GIGABYTE)).toBe(0.9313225746154785);
 });
 
 test('Convert gibibytes (GiB) to gibibytes (GiB)', () => {
     expect(DataUnit.GIBIBYTE.convert(1, DataUnit.GIBIBYTE)).toBe(1);
+});
+
+test('Convert terabytes (TB) to gibibytes (GiB)', () => {
+    expect(DataUnit.GIBIBYTE.convert(1, DataUnit.TERABYTE)).toBe(931.3225746154785);
+});
+
+test('Convert tebibytes (TiB) to gibibytes (GiB)', () => {
+    expect(DataUnit.GIBIBYTE.convert(1, DataUnit.TEBIBYTE)).toBe(1_024);
 });

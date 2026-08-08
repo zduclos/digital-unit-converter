@@ -13,7 +13,7 @@ test('Convert megabytes (MB) to kilobytes (kB)', () => {
 });
 
 test('Convert megabytes (MB) to kibibytes (KiB)', () => {
-    expect(DataUnit.MEGABYTE.toKibibytes(1)).toBe(976.563);
+    expect(DataUnit.MEGABYTE.toKibibytes(1)).toBe(976.5625);
 });
 
 test('Convert megabytes (MB) to megabytes (MB)', () => {
@@ -21,7 +21,7 @@ test('Convert megabytes (MB) to megabytes (MB)', () => {
 });
 
 test('Convert megabytes (MB) to mebibytes (MiB)', () => {
-    expect(DataUnit.MEGABYTE.toMebibytes(1)).toBe(0.953674);
+    expect(DataUnit.MEGABYTE.toMebibytes(1)).toBe(0.95367431640625);
 });
 
 test('Convert megabyte (MB) to gigabytes (GB)', () => {
@@ -29,7 +29,15 @@ test('Convert megabyte (MB) to gigabytes (GB)', () => {
 });
 
 test('Convert megabyte (MB) to gibibytes (GiB)', () => {
-    expect(DataUnit.MEGABYTE.toGibibytes(1)).toBe(0.000931323);
+    expect(DataUnit.MEGABYTE.toGibibytes(1)).toBe(0.0009313225746154785);
+});
+
+test('Convert megabytes (MB) to terabytes (TB)', () => {
+    expect(DataUnit.MEGABYTE.toTerabytes(1)).toBe(0.000001);
+});
+
+test('Convert megabytes (MB) to tebibytes (TiB)', () => {
+    expect(DataUnit.MEGABYTE.toTebibytes(1)).toBe(9.094947017729282e-7);
 });
 
 test('Convert bits (b) to megabytes (MB)', () => {
@@ -53,7 +61,7 @@ test('Convert megabytes (MB) to megabytes (MB)', () => {
 });
 
 test('Convert mebibytes (MiB) to megabytes (MB)', () => {
-    expect(DataUnit.MEGABYTE.convert(1, DataUnit.MEBIBYTE)).toBe(1.04858);
+    expect(DataUnit.MEGABYTE.convert(1, DataUnit.MEBIBYTE)).toBe(1.048576);
 });
 
 test('Convert gigabytes (GB) to megabytes (MB)', () => {
@@ -62,4 +70,12 @@ test('Convert gigabytes (GB) to megabytes (MB)', () => {
 
 test('Convert gibibytes (GiB) to megabytes (MB)', () => {
     expect(DataUnit.MEGABYTE.convert(1, DataUnit.GIBIBYTE)).toBe(1_073.741824);
+});
+
+test('Convert terabytes (TB) to megabytes (MB)', () => {
+    expect(DataUnit.MEGABYTE.convert(1, DataUnit.TERABYTE)).toBe(1_000_000);
+});
+
+test('Convert tebibytes (TiB) to megabytes (MB)', () => {
+    expect(DataUnit.MEGABYTE.convert(1, DataUnit.TEBIBYTE)).toBe(1_099_511.627776);
 });
