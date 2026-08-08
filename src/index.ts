@@ -65,8 +65,7 @@ export class DataUnit {
      * @returns {number} converted value in this unit
      */
     public convert(val: number, unit: DataUnit): number {
-        const bytes = val * unit.bytesPerUnit;
-        return bytes / this.bytesPerUnit;
+        return (val * unit.bytesPerUnit) / this.bytesPerUnit;
     }
 
     /**

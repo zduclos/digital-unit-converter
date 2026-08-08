@@ -59,16 +59,18 @@ console.log(converted); // 1024
 
 The following data units are currently supported.
 
-| DataUnit | Term | Abbreviation | Unit Type | Number of Bytes |
-| :--- | :--- | :--- | :--- | :--- |
-| BIT | bit | b | - | 0.125 |
-| BYTE | byte | B | - | 1 |
-| KILOBYTE | kilobyte | kB | Decimal | 10<sup>3</sup> |
-| KIBIBYTE | kibibyte | KiB | Binary | 2<sup>10</sup> |
-| MEGABYTE | megabyte | MB | Decimal | 10<sup>6</sup> |
-| MEBIBYTE | mebibyte | MiB | Binary | 2<sup>20</sup> |
-| GIGABYTE | gigabyte | GB | Decimal | 10<sup>9</sup> |
-| GIBIBYTE | gibibyte | GiB | Binary | 2<sup>30</sup> |
+| DataUnit | Term     | Abbreviation | Unit Type | Number of Bytes |
+|:---------|:---------|:-------------|:----------|:----------------|
+| BIT      | bit      | b            | -         | 0.125           |
+| BYTE     | byte     | B            | -         | 1               |
+| KILOBYTE | kilobyte | kB           | Decimal   | 10<sup>3</sup>  |
+| KIBIBYTE | kibibyte | KiB          | Binary    | 2<sup>10</sup>  |
+| MEGABYTE | megabyte | MB           | Decimal   | 10<sup>6</sup>  |
+| MEBIBYTE | mebibyte | MiB          | Binary    | 2<sup>20</sup>  |
+| GIGABYTE | gigabyte | GB           | Decimal   | 10<sup>9</sup>  |
+| GIBIBYTE | gibibyte | GiB          | Binary    | 2<sup>30</sup>  |
+| TERABYTE | terabyte | TB           | Decimal   | 10<sup>12</sup> |
+| TEBIBYTE | tebibyte | TiB          | Binary    | 2<sup>40</sup>  |
 
 ## Static Members
 
@@ -80,6 +82,8 @@ The following data units are currently supported.
 - [KILOBYTE](README.md#kilobyte)
 - [MEBIBYTE](README.md#mebibyte)
 - [MEGABYTE](README.md#megabyte)
+- [TEBIBYTE](README.md#tebibyte)
+- [TERABYTE](README.md#terabyte)
 
 ### BIT
 
@@ -159,6 +163,26 @@ Megabyte (MB). Decimal data unit representing 1,000<sup>2</sup> bytes
 
 Defined in: [index.ts:70](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L70)
 
+___
+
+### TEBIBYTE
+
+▪ `Static` `Readonly` **TEBIBYTE**: *DataUnit*
+
+Tebibyte (TiB). Binary data unit representing 1,024<sup>4</sup> bytes
+
+Defined in: [index.ts:115](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L115)
+
+___
+
+### TERABYTE
+
+▪ `Static` `Readonly` **TERABYTE**: *DataUnit*
+
+Terabyte (TB). Decimal data unit representing 1,000<sup>4</sup> bytes
+
+Defined in: [index.ts:100](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L100)
+
 ## Methods
 
 - [convert](README.md#convert)
@@ -170,6 +194,8 @@ Defined in: [index.ts:70](https://github.com/zduclos/digital-unit-converter/blob
 - [toKilobytes](README.md#tokilobytes)
 - [toMebibytes](README.md#tomebibytes)
 - [toMegabytes](README.md#tomegabytes)
+- [toTebibytes](README.md#totebibytes)
+- [toTerabytes](README.md#toterabytes)
 
 ### convert
 
@@ -349,3 +375,50 @@ Name | Type | Description |
 converted megabyte value
 
 Defined in: [index.ts:218](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L218)
+
+### toTebibytes
+
+▸ **toTebibytes**(`val`: *number*): *number*
+
+Convert a value in this unit to tebibytes (TiB)
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`val` | *number* | value to convert to tebibytes   |
+
+**Returns:** *number*
+
+converted tebibyte value
+
+Defined in: [index.ts:248](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L248)
+
+___
+
+### toTerabytes
+
+▸ **toTerabytes**(`val`: *number*): *number*
+
+Convert a value in this unit to terabytes (TB)
+
+#### Parameters:
+
+Name | Type | Description                   |
+:------ | :------ |:------------------------------|
+`val` | *number* | value to convert to terabytes |
+
+**Returns:** *number*
+
+converted terabyte value
+
+Defined in: [index.ts:238](https://github.com/zduclos/digital-unit-converter/blob/master/src/index.ts#L238)
+
+___
+
+## Development
+Node.js 22 is supported.
+
+```shell
+npm install
+npm run check
