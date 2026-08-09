@@ -8,6 +8,7 @@
   - [Supported Data Units](#supported-data-units)
   - [Static Members](#static-members)
   - [Methods](#methods)
+  - [Development](#development)
 
 ## Installation
 
