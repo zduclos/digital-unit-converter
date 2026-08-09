@@ -36,6 +36,14 @@ test('Convert bits (b) to kibibyte (KiB)', () => {
     expect(DataUnit.KIBIBYTE.convert(1, DataUnit.BIT)).toBe(0.0001220703125);
 });
 
+test('Convert kibibytes (KiB) to terabytes (TB)', () => {
+    expect(DataUnit.KIBIBYTE.toTerabytes(1)).toBe(1.024e-9);
+});
+
+test('Convert kibibytes (KiB) to tebibytes (TiB)', () => {
+    expect(DataUnit.KIBIBYTE.toTebibytes(1)).toBe(9.313225746154785e-10);
+});
+
 test('Convert bytes (B) to kibibyte (KiB)', () => {
     expect(DataUnit.KIBIBYTE.convert(1, DataUnit.BYTE)).toBe(0.0009765625);
 });
@@ -49,7 +57,7 @@ test('Convert kibibyte (KiB) to kibibyte (KiB)', () => {
 });
 
 test('Convert megabytes (MB) to kibibyte (KiB)', () => {
-    expect(DataUnit.KIBIBYTE.convert(1, DataUnit.MEGABYTE)).toBe(976.563);
+    expect(DataUnit.KIBIBYTE.convert(1, DataUnit.MEGABYTE)).toBe(976.5625);
 });
 
 test('Convert mebibytes (MiB) to kibibyte (KiB)', () => {
@@ -57,9 +65,17 @@ test('Convert mebibytes (MiB) to kibibyte (KiB)', () => {
 });
 
 test('Convert gigabytes (GB) to kibibyte (KiB)', () => {
-    expect(DataUnit.KIBIBYTE.convert(1, DataUnit.GIGABYTE)).toBe(9765632.5);
+    expect(DataUnit.KIBIBYTE.convert(1, DataUnit.GIGABYTE)).toBe(976562.5);
 });
 
 test('Convert gibibytes (GiB) to kibibyte (KiB)', () => {
-    expect(DataUnit.KIBIBYTE.convert(1, DataUnit.GIBIBYTE)).toBe(1_048_576.534774);
+    expect(DataUnit.KIBIBYTE.convert(1, DataUnit.GIBIBYTE)).toBe(1048576);
+});
+
+test('Convert terabytes (TB) to kibibytes (KiB)', () => {
+    expect(DataUnit.KIBIBYTE.convert(1, DataUnit.TERABYTE)).toBe(976_562_500);
+});
+
+test('Convert tebibytes (TiB) to kibibytes (KiB)', () => {
+    expect(DataUnit.KIBIBYTE.convert(1, DataUnit.TEBIBYTE)).toBe(1_073_741_824);
 });

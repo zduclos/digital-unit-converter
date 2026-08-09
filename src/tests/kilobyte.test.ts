@@ -21,7 +21,7 @@ test('Convert kilobytes (kB) to megabytes (MB)', () => {
 });
 
 test('Convert kilobytes (kB) to mebibytes (MiB)', () => {
-    expect(DataUnit.KILOBYTE.toMebibytes(1)).toBe(0.000953674);
+    expect(DataUnit.KILOBYTE.toMebibytes(1)).toBe(0.00095367431640625);
 });
 
 test('Convert kilobytes (kB) to gigabytes (GB)', () => {
@@ -30,6 +30,14 @@ test('Convert kilobytes (kB) to gigabytes (GB)', () => {
 
 test('Convert kilobytes (kB) to gibibytes (GiB)', () => {
     expect(DataUnit.KILOBYTE.toGibibytes(1)).toBe(9.313225746154785e-7);
+});
+
+test('Convert kilobytes (kB) to terabytes (TB)', () => {
+    expect(DataUnit.KILOBYTE.toTerabytes(1)).toBe(1e-9);
+});
+
+test('Convert kilobytes (kB) to tebibytes (TiB)', () => {
+    expect(DataUnit.KILOBYTE.toTebibytes(1)).toBe(9.094947017729282e-10);
 });
 
 test('Convert bits (b) to kilobytes (kB)', () => {
@@ -53,7 +61,7 @@ test('Convert megabytes (MB) to kilobytes (kB)', () => {
 });
 
 test('Convert mebibytes (MiB) to kilobytes (kB)', () => {
-    expect(DataUnit.KILOBYTE.convert(1, DataUnit.MEBIBYTE)).toBe(1_048.58);
+    expect(DataUnit.KILOBYTE.convert(1, DataUnit.MEBIBYTE)).toBe(1048.576);
 });
 
 test('Convert gigabytes (GB) to kilobytes (kB)', () => {
@@ -62,4 +70,12 @@ test('Convert gigabytes (GB) to kilobytes (kB)', () => {
 
 test('Convert gibibytes (GiB) to kilobytes (kB)', () => {
     expect(DataUnit.KILOBYTE.convert(1, DataUnit.GIBIBYTE)).toBe(1_073_741.824);
+});
+
+test('Convert terabytes (TB) to kilobytes (kB)', () => {
+    expect(DataUnit.KILOBYTE.convert(1, DataUnit.TERABYTE)).toBe(1_000_000_000);
+});
+
+test('Convert tebibytes (TiB) to kilobytes (kB)', () => {
+    expect(DataUnit.KILOBYTE.convert(1, DataUnit.TEBIBYTE)).toBe(1_099_511_627.776);
 });
